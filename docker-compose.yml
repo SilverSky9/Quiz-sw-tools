@@ -1,0 +1,30 @@
+version: '3'
+services:
+  Zipkin_service:
+    image: openzipkin/zipkin
+    ports: 
+    - 9411:3000
+  Prometheus_service:
+    image: bitnami/prometheus
+    ports:
+    - 9090:9090
+  Grafana_service:
+    image: grafana/grafana
+    ports:
+      - 9999:3000
+  service_1:
+    image: node_image
+    build: .
+    ports:
+      - 3001:3000
+    command: npm run service1
+  service_2:
+    image: node_image
+    command: npm run service2
+    ports:
+      - 3002:3000
+  service_3:
+    image: node_image
+    command: node service3.js
+    ports:
+      - 3003:3000

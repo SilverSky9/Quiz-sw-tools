@@ -1,0 +1,32 @@
+{
+  "name": "workshop-nodejs-observability",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "service1": "sh start_service1.sh",
+    "service2": "sh start_service2.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/up1/workshop-nodejs-observability.git"
+  },
+  "author": "up1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/up1/workshop-nodejs-observability/issues"
+  },
+  "homepage": "https://github.com/up1/workshop-nodejs-observability#readme",
+  "dependencies": {
+    "@opentelemetry/api": "^1.0.4",
+    "@opentelemetry/auto-instrumentations-node": "^0.28.0",
+    "@opentelemetry/exporter-prometheus": "^0.27.0",
+    "@opentelemetry/exporter-zipkin": "^1.0.1",
+    "@opentelemetry/instrumentation-express": "^0.28.0",
+    "@opentelemetry/instrumentation-http": "^0.27.0",
+    "@opentelemetry/sdk-metrics-base": "^0.27.0",
+    "@opentelemetry/sdk-node": "^0.27.0",
+    "cross-fetch": "^3.1.5",
+    "express": "^4.17.3"
+  }
+}
